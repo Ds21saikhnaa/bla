@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post, Put } from '@nestjs/common';
+import { Body, Controller, Get, Post /*Put*/ } from '@nestjs/common';
 import { PostService } from './post.service';
 
 @Controller('post')
@@ -11,7 +11,6 @@ export class PostController {
 
   @Post()
   createPost(@Body() body): any {
-    console.log(body);
     return this.appService.createPost(body);
   }
 
